@@ -31,7 +31,7 @@ const BioInformation = (prop: any) => {
             <Modal onEnterKeyDown={() => handleClose()} show={show}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleClose} keyboard={true}  centered>
                 
                             <h1 className={'titleShape titlepurple'}>
-                                Content Packs
+                                Introduction
                                 <div className="row float-end">
                                     <div className='col-12 float-end'>
                                         <Button style={{padding:"0em"}} variant="" onClick={() => handleClose()}>
@@ -47,25 +47,13 @@ const BioInformation = (prop: any) => {
                                 
                                 <div className="row textHolder">
                                     <p className="bodytext">
-                                        Content packs are structured JSON files that allow people to make their ICON content accessable in
-                                        ICONpendium. Here, you can add or delete content packs to include them in the ICONpendium. You can
-                                        hold up to 5MB of content packs at any given time.
+                                        {"Heya! I'm Lane Edwards-Brown (also known as Bob the King Of Seagulls), a software engineer and artist from New Zealand. This website is the central hub for my current projects, as well as an archive of the work I've done over the years."}
                                     </p>
                                     <p className="bodytext">
-                                        Once uploaded you can activate or deactive a content pack. Deactivating it removes it from the ICONpendium,
-                                        but still keeps the file stored on your browser and can be turned on again at any time.
+                                        {"Most of my art focuses on science fiction and fantasy illustration. These run the gambit from simple icon designs, to collage or digitally drawn pieces, to even 3D model and animation work. You'll also see software I release on occasion! Currently, I'm mostly focused on my own personal projects, but will occasionally open up to take commission work when I feel capable of putting the time in."}
                                     </p>
-                                    <div className="separator"><p style={{fontSize:"0.8em"}}>Incompatability</p></div>
                                     <p className="bodytext">
-                                        If two pieces of data across your uploaded content packs share the same ID value, this can cause issues
-                                        when searching and constructing information. When this incompatability is detected, you will be notified.
-                                        and are encouraged to remove the offending content pack.
-                                    </p>
-                                    <div className="separator"><p style={{fontSize:"0.8em"}}>Custom Packs</p></div>
-                                    <p className="bodytext">
-                                        Building your own content pack is easy. View the <a className='homelink' href='https://github.com/Bob-The-Seagull-King/icon-react/blob/main/README.md' rel="noreferrer" target='_blank'>README</a> documentation for the ICONconpendium to learn more
-                                        about how to structure your content pack, then fill out the information as you need it. Once
-                                        everything{"'"}s in order, you{"'"}re good to go!
+                                       {"If you have any questions or queries, check the Socials tab to find ways to contact me."}
                                     </p>
                                 </div>
                         </div>
