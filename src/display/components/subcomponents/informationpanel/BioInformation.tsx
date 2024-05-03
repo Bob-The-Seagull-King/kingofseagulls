@@ -53,7 +53,7 @@ const BioInformation = (prop: any) => {
                                         {"Most of my art focuses on science fiction and fantasy illustration. These run the gambit from simple icon designs, to collage or digitally drawn pieces, to even 3D model and animation work. You'll also see software I release on occasion! Currently, I'm mostly focused on my own personal projects, but will occasionally open up to take commission work when I feel capable of putting the time in."}
                                     </p>
                                     <p className="bodytext">
-                                       {"If you have any questions or queries, check the Socials tab to find ways to contact me."}
+                                       {"If you have any questions or queries, check the Contacts tab to find ways to contact me."}
                                     </p>
                                 </div>
                         </div>
