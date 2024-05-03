@@ -4,11 +4,12 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ROUTES } from '../../resources/routes-constants'
 
-import PlayerTacticsAbilities from '../../display/pages/PlayerTacticsAbilities'
+import ProjectIconpendiumPage from '../pages/ProjectIconpendiumPage'
+import ProjctVisionsUnveiledPage from '../pages/ProjectVisionsUnveiledPage'
 import { AllAbilitiesListPage } from '../../classes/viewmodel/pages/AllAbilitiesListPage'
 import path from 'path'
 
-const CompendiumRoute: React.FC = () => {
+const ProjectRoute: React.FC = () => {
 
     // Initialize Controller //
     const AbilitiesCollectionController = new AllAbilitiesListPage()
@@ -16,10 +17,11 @@ const CompendiumRoute: React.FC = () => {
     // Return result -----------------------------
     return (
         <Routes>
-            <Route path={ROUTES.COMPENDIUM_ABILITY_ROUTE} element={<PlayerTacticsAbilities controller={AbilitiesCollectionController}/>} />
+            <Route path={ROUTES.PROJECT_ICON_ROUTE} element={<ProjectIconpendiumPage controller={AbilitiesCollectionController}/>} />
+            <Route path={ROUTES.PROJECT_VU_ROUTE} element={<ProjctVisionsUnveiledPage controller={AbilitiesCollectionController}/>} />
         </Routes>
     )
     // -------------------------------------------
 }
 
-export default CompendiumRoute
+export default ProjectRoute

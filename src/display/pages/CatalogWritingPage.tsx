@@ -7,10 +7,10 @@ import { AllAbilitiesListPage } from '../../classes/viewmodel/pages/AllAbilities
 import { AbilitiesFilterManager } from '../../classes/viewmodel/collections/filters/AbilitiesFilterManager'
 
 import AbilityDisplay from '../components/features/abilities/AbilityDisplay'
-import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
-import AbilityFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/AbilityFilterSelectDisplay'
+import ViewTableItemDisplay from '../components/subcomponents/list/ViewTableItemDisplay'
+import AbilityFilterSelectDisplay from '../components/subcomponents/filters/filterselectors/AbilityFilterSelectDisplay'
 
-const PlayerTacticsAbilities = (prop: any) => {
+const CatalogWritingPage = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: AllAbilitiesListPage = prop.controller
     const AbilitiesCollectionController: ViewAbilitiesCollection = ViewPageController.Collection;
@@ -158,4 +158,4 @@ const PlayerTacticsAbilities = (prop: any) => {
     // -------------------------------------------
 }
 
-export default PlayerTacticsAbilities
+export default CatalogWritingPage

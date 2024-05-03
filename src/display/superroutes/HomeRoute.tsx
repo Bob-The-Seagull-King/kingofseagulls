@@ -50,7 +50,7 @@ const HomeRoute: React.FC = () => {
                     </div>
                     <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
                         <div className="col">
-                            <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/abilities/")}>
+                            <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("project/iconpendium/")}>
                                 <FontAwesomeIcon icon={faWrench} className="pageaccestext"/>
                                 <h1 className="pageaccestext">
                                     ICONPENDIUM
@@ -59,7 +59,7 @@ const HomeRoute: React.FC = () => {
                             <div className="verticalspacermed"/>
                         </div>
                         <div className='col'>
-                            <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/abilities/")}>
+                            <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("project/visionsunveiled/")}>
                                 <FontAwesomeIcon icon={faBook} className="pageaccestext"/>
                                 <h1 className="pageaccestext">
                                     VISIONS UNVEILED
@@ -73,7 +73,7 @@ const HomeRoute: React.FC = () => {
                     </div>
                     <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
                         <div className="col">
-                            <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/abilities/")}>
+                            <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("catalog/art/")}>
                                 <FontAwesomeIcon icon={faPaintBrush} className="pageaccestext"/>
                                 <h1 className="pageaccestext">
                                     ART
@@ -82,7 +82,7 @@ const HomeRoute: React.FC = () => {
                             <div className="verticalspacermed"/>
                         </div>
                         <div className="col">
-                            <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/abilities/")}>
+                            <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("catalog/writing/")}>
                                 <FontAwesomeIcon icon={faPen} className="pageaccestext"/>
                                 <h1 className="pageaccestext">
                                     WRITINGS
@@ -91,7 +91,7 @@ const HomeRoute: React.FC = () => {
                             <div className="verticalspacermed"/>
                         </div>
                         <div className="col">
-                            <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/abilities/")}>
+                            <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("catalog/blog/")}>
                                 <FontAwesomeIcon icon={faFilePen} className="pageaccestext"/>
                                 <h1 className="pageaccestext">
                                     BLOG

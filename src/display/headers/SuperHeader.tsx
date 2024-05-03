@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { BrowserRouter as Router, Route, Routes, useLocation  } from 'react-router-dom'
 import { ROUTES } from '../../resources/routes-constants'
 
-import PlayerTacticsHeader from './PlayerTacticsHeader'
+import BasicPageHeader from './BasicPageHeader'
 
 const SuperHeader: React.FC = () => {
     const [stateheight, setHeight] = useState(0);
@@ -27,8 +27,8 @@ const SuperHeader: React.FC = () => {
         <>
         <div id="topbarbody" ref={ref} className="topbarStructure">
             <Routes>
-                <Route path={ROUTES.COMPENDIUM_ROUTE} element={<PlayerTacticsHeader/>} />
-                <Route path={ROUTES.TOOLS_ROUTE} element={<PlayerTacticsHeader/>} />
+                <Route path={ROUTES.PROJECT_ROUTE} element={<BasicPageHeader />} />
+                <Route path={ROUTES.CATALOG_ROUTE} element={<BasicPageHeader />} />
             </Routes>
         </div>
         <div style={{height:stateheight}}/>

@@ -107,12 +107,20 @@ export function getTagValue(tag:any, value:string) {
  * @returns A string name for the route endpoint.
  */
 export function getRouteName(_route: string) {
-    if (_route.includes("compendium/abilities")) {
-        return "Abilities"
+    if (_route.includes("project/iconpendium")) {
+        return "Iconpendium"
     }
-
-    if (_route.includes("tools/content")) {
-        return "Content Manager"
+    if (_route.includes("project/visionsunveiled")) {
+        return "Visions Unveiled"
+    }
+    if (_route.includes("catalog/art")) {
+        return "Art"
+    }
+    if (_route.includes("catalog/writing")) {
+        return "Writing"
+    }
+    if (_route.includes("catalog/blog")) {
+        return "Blog"
     }
 
     return ""
