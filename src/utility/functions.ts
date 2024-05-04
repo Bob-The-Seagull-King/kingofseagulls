@@ -126,6 +126,14 @@ export function getRouteName(_route: string) {
     return ""
 }
 
+export function getRouteTitle(_route: string) {
+    if (_route.includes("project/iconpendium")) {
+        return "Yes I Am Very Normal About TTRPGs Why Do You Ask?"
+    }
+
+    return ""
+}
+
 type sortArg<T> = keyof T | `-${string & keyof T}`
 
 /**

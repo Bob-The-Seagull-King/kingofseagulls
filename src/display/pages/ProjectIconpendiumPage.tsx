@@ -6,6 +6,8 @@ import { ViewAbilitiesCollection } from '../../classes/viewmodel/collections/Vie
 import { AllAbilitiesListPage } from '../../classes/viewmodel/pages/AllAbilitiesListPage'
 import { AbilitiesFilterManager } from '../../classes/viewmodel/collections/filters/AbilitiesFilterManager'
 
+import logo from '../../resources/images/iconpendium_logo.png'
+
 import AbilityDisplay from '../components/features/abilities/AbilityDisplay'
 import ViewTableItemDisplay from '../components/subcomponents/list/ViewTableItemDisplay'
 import AbilityFilterSelectDisplay from '../components/subcomponents/filters/filterselectors/AbilityFilterSelectDisplay'
@@ -80,75 +82,23 @@ const ProjectIconpendiumPage = (prop: any) => {
     // Return result -----------------------------
     return (
         <div className="container">
-            <div className="row">
-                {/* Display the filters and abilities which match the filters, if any. */}
-                <div className="col-lg-5 col-md-5 col-sm-12 col-xs-12 col-12 my-0 py-0">
-                    <div className="row p-3 overflow-auto flex-grow-1">
-                        <div style={{"maxHeight": "calc(80vh)"}}>
-                            <div className="col-12">
-                                <div className="row">
-                                    <div className='col-12'>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className='col-12'>
-                                        {ReturnSearchFilterBox()}
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className='col-12'>
-                                        <br/>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className='col-12'>
-                                        <div className='bordermainpurple roundBody no-padding '>
-                                            {_foundItems.length == 0 && 
-                                                <div className="">
-                                                    <h1 className="subtletext">No Abilities Found</h1>
-                                                </div>
-                                            }
-                                            {_foundItems.map((item) => (
-                                                <div className="col-12 my-0 py-0 no-margin" key={"tableItemDisplay"+item.HeldItem.ID+(_keyval.toString())}>
-                                                    <ViewTableItemDisplay key={"tableItemDisplay"+item.HeldItem.ID+(_keyval.toString())} data={item} parent={AbilitiesCollectionController} statefunction={ItemRecall} positionid={getcolor}/>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div className="row justify-content-center m-0 p-0">
+                <div className="col-lg-8 col-md-12 col-sm-12 col-xs-12 col-12">
+                    <div className="row" style={{width:"100%"}}>
+                        {/*<div className="col-12" style={{display:"flex",alignItems:"center",textAlign:"center"}}>
+                                <h1 className="packsubtitle" style={{width:"100%",textAlign:"center"}}>
+                                    Yes I Am Very Normal About TTRPGs Why Do You Ask?
+                                </h1>
+    </div>*/}
                     </div>
-                </div>
-                {/* Display the selected abilities, if any */}
-                <div className="col-lg-7 col-md-7 col-sm-12 col-xs-12 col-12">
-                    <div className="row p-3 overflow-auto flex-grow-1">
-                        <div style={{"maxHeight": "calc(80vh)"}}>
-                            <div className="col-12">
-                                <div className="row">
-                                    <div className='col-12'>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className='col-12'>
-                                        {_activeItems.length == 0 &&
-                                            <div className="">
-                                                <div className='bordersubgrey emptyboxStructure'>
-                                                    <h1 className="subtletext">No Items Selected</h1>
-                                                </div>
-                                            </div>
-                                        }
-                                    </div>
-                                </div>
-                                <div className="row row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
-                                    {_activeItems.map((item) => (
-                                        <div className="col" key={"abilityDisplay"+item.ID}>
-                                            <AbilityDisplay data={item}/>
-                                            <br/>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
+                    <div className="row">
+                        <img src={logo} style={{maxWidth:"100%"}} />
+                    </div>
+                    <div className="row">
+                        <div className="separator"><h3 style={{fontFamily:"Libre Baskerville"}}>What is Iconpendium?</h3></div>
+                    </div>
+                    <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
+                        <div className="col">
                         </div>
                     </div>
                 </div>
