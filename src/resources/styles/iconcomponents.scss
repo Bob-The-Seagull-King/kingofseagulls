@@ -297,6 +297,15 @@
     }
 }
 
+.subpageaccessbox {
+    justify-content: center;
+    display: flex; /* make element size relative to content */
+    align-items: center;
+    border-radius: 0.2em;
+    box-shadow: 0 0 5px 1px #CCC;
+    padding: 0.25em;
+}
+
 .generalbuttonbox {
     justify-content: center;
     display: flex; /* make element size relative to content */

@@ -17,7 +17,7 @@ const ProjectRoute: React.FC = () => {
     // Return result -----------------------------
     return (
         <Routes>
-            <Route path={ROUTES.PROJECT_ICON_ROUTE} element={<ProjectIconpendiumPage controller={AbilitiesCollectionController}/>} />
+            <Route path={ROUTES.PROJECT_ICON_ROUTE} element={<ProjectIconpendiumPage/>} />
             <Route path={ROUTES.PROJECT_VU_ROUTE} element={<ProjctVisionsUnveiledPage controller={AbilitiesCollectionController}/>} />
         </Routes>
     )

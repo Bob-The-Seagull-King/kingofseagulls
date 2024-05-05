@@ -2,105 +2,118 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../resources/styles/_icon.scss'
 import React, { useState } from 'react'
 
-import { ViewAbilitiesCollection } from '../../classes/viewmodel/collections/ViewAbilitiesCollections'
-import { AllAbilitiesListPage } from '../../classes/viewmodel/pages/AllAbilitiesListPage'
-import { AbilitiesFilterManager } from '../../classes/viewmodel/collections/filters/AbilitiesFilterManager'
-
 import logo from '../../resources/images/iconpendium_logo.png'
 
-import AbilityDisplay from '../components/features/abilities/AbilityDisplay'
-import ViewTableItemDisplay from '../components/subcomponents/list/ViewTableItemDisplay'
-import AbilityFilterSelectDisplay from '../components/subcomponents/filters/filterselectors/AbilityFilterSelectDisplay'
-
 const ProjectIconpendiumPage = (prop: any) => {
-    // Initialize controllers and managers
-    const ViewPageController: AllAbilitiesListPage = prop.controller
-    const AbilitiesCollectionController: ViewAbilitiesCollection = ViewPageController.Collection;
-    const FilterManager: AbilitiesFilterManager = ViewPageController.FilterManager;
-
-    // Initialize Use State
-    const [_activeItems, returnstate] = useState(AbilitiesCollectionController.AbilitiesList);
-    const [_foundItems, returntable] = useState(AbilitiesCollectionController.itemcollection);
-    const [_keyval, updatekey] = useState(1);
-
-    let listcolourval = 0;
-
-    // Functions -----------------------------------------------------------------------------------
-
-    /**
-     * @return the current colour value + 1
-     */
-    function getcolor() {
-        listcolourval += 1;
-        return listcolourval;
-    }
-
-    /**
-     * Update state of the list of abilities currently active
-     */
-    function ItemRecall() {
-        returnstate(RecallAbilities())
-    }
-
-    /**
-     * Get the controller to update the search, then update
-     * the state of the ability/item list arrays. Update the
-     * keyval in order to force a rerender of elements.
-     */
-    function UpdateSearch() {
-        ViewPageController.updateSearch();
-        returntable(RecallTable())
-        returnstate(RecallAbilities())
-        updatekey(_keyval+1)
-    }
-
-    /**
-     * @returns Update the state of the abilities selected
-     */
-    function RecallAbilities() {
-        const abilities = AbilitiesCollectionController.ReturnAbilities();
-        return abilities;
-    }
-
-    /**
-     * @returns Update the state of the items available to select
-     */
-    function RecallTable() {
-        const table = AbilitiesCollectionController.ReturnItems();
-        return table;
-    }
-
-    /**
-     * @returns The filter display component
-     */
-    function ReturnSearchFilterBox() {
-        return (
-            <AbilityFilterSelectDisplay controller={ViewPageController} runfunction={UpdateSearch}/>
-        )
-    }
 
     // Return result -----------------------------
     return (
         <div className="container">
             <div className="row justify-content-center m-0 p-0">
                 <div className="col-lg-8 col-md-12 col-sm-12 col-xs-12 col-12">
-                    <div className="row" style={{width:"100%"}}>
-                        {/*<div className="col-12" style={{display:"flex",alignItems:"center",textAlign:"center"}}>
-                                <h1 className="packsubtitle" style={{width:"100%",textAlign:"center"}}>
-                                    Yes I Am Very Normal About TTRPGs Why Do You Ask?
-                                </h1>
-    </div>*/}
-                    </div>
                     <div className="row">
                         <img src={logo} style={{maxWidth:"100%"}} />
                     </div>
+                    <div style={{marginTop:"1.5em"}} />
                     <div className="row">
-                        <div className="separator"><h3 style={{fontFamily:"Libre Baskerville"}}>What is Iconpendium?</h3></div>
+                        <div className="separator"><h3 style={{fontFamily:"Libre Baskerville"}}>Project Information</h3></div>
                     </div>
+                    
+                    <div style={{marginTop:"2em"}} />
+                    
                     <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
                         <div className="col">
+                            <div className="subpageaccessbox bordersubpurple">
+                                <h1 className="pageaccestext">
+                                    What Is ICON?
+                                </h1>
+                            </div>
+                            
+                            <div style={{marginTop:"1em"}} />
+
+                            <div className="row textHolder">
+                                <p className="bodytext">
+                                    Content packs are structured JSON files that allow people to make their ICON content accessable in
+                                    ICONpendium. Here, you can add or delete content packs to include them in the ICONpendium. You can
+                                    hold up to 5MB of content packs at any given time.
+                                </p>
+                                <p className="bodytext">
+                                    Once uploaded you can activate or deactive a content pack. Deactivating it removes it from the ICONpendium,
+                                    but still keeps the file stored on your browser and can be turned on again at any time.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="subpageaccessbox bordersubpurple">
+                                <h1 className="pageaccestext">
+                                    What Is Iconpendium?
+                                </h1>
+                            </div>
+                            
+                            <div style={{marginTop:"1em"}} />
+
+                            <div className="row textHolder">
+                                <p className="bodytext">
+                                    Content packs are structured JSON files that allow people to make their ICON content accessable in
+                                    ICONpendium. Here, you can add or delete content packs to include them in the ICONpendium. You can
+                                    hold up to 5MB of content packs at any given time.
+                                </p>
+                                <p className="bodytext">
+                                    Once uploaded you can activate or deactive a content pack. Deactivating it removes it from the ICONpendium,
+                                    but still keeps the file stored on your browser and can be turned on again at any time.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="subpageaccessbox bordersubpurple">
+                                <h1 className="pageaccestext">
+                                    More About ICON
+                                </h1>
+                            </div>
+                            
+                            <div style={{marginTop:"1em"}} />
+
+                            <div className="row textHolder">
+                                <p className="bodytext">
+                                    Content packs are structured JSON files that allow people to make their ICON content accessable in
+                                    ICONpendium. Here, you can add or delete content packs to include them in the ICONpendium. You can
+                                    hold up to 5MB of content packs at any given time.
+                                </p>
+                                <p className="bodytext">
+                                    Once uploaded you can activate or deactive a content pack. Deactivating it removes it from the ICONpendium,
+                                    but still keeps the file stored on your browser and can be turned on again at any time.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="subpageaccessbox bordersubpurple">
+                                <h1 className="pageaccestext">
+                                    Iconpendium Tech Stack
+                                </h1>
+                            </div>
+                            
+                            <div style={{marginTop:"1em"}} />
+
+                            <div className="row textHolder">
+                                <p className="bodytext">
+                                    Content packs are structured JSON files that allow people to make their ICON content accessable in
+                                    ICONpendium. Here, you can add or delete content packs to include them in the ICONpendium. You can
+                                    hold up to 5MB of content packs at any given time.
+                                </p>
+                                <p className="bodytext">
+                                    Once uploaded you can activate or deactive a content pack. Deactivating it removes it from the ICONpendium,
+                                    but still keeps the file stored on your browser and can be turned on again at any time.
+                                </p>
+                            </div>
                         </div>
                     </div>
+
+                    <div style={{marginTop:"1.5em"}} />
+                    <div className="row">
+                        <div className="separator"><h3 style={{fontFamily:"Libre Baskerville"}}>Project Gallery</h3></div>
+                    </div>
+                    
+                    <div style={{marginTop:"2em"}} />
                 </div>
             </div>
         </div>
