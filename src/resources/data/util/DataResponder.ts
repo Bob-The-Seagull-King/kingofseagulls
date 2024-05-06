@@ -3,6 +3,7 @@
 import abilitiesdata from '../data/player/abilities.json'
 import addonsdata from '../data/player/addons.json'
 import glossarydata from '../data/general/glossary.json'
+import artdata from '../data/art/art.json'
 // -----------------------------------------------------
 
 /**
@@ -68,6 +69,9 @@ class DataResponder {
             }
             case "glossary": {
                 return glossarydata.concat(data)
+            }
+            case "art": {
+                return artdata.concat(data)
             }
             default: {
                 return data

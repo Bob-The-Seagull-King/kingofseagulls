@@ -3,8 +3,19 @@ import '../../resources/styles/_icon.scss'
 import React, { useState } from 'react'
 
 import logo from '../../resources/images/iconpendium_logo.png'
+import { ViewArtGalleryCollections } from '../../classes/viewmodel/collections/ViewArtGalleryCollections'
+import GalleryArtDisplay from '../../display/components/features/gallery/GalleryArtDisplay'
 
 const ProjectIconpendiumPage = (prop: any) => {
+
+    const gallery: ViewArtGalleryCollections = new ViewArtGalleryCollections();
+    
+    gallery.UpdateSearchParams({searchtype: "file", searchparam: {type: "art"}});
+    gallery.RunSearch();
+
+    const imageset = gallery.AbilitiesList;
+
+    console.log(imageset)
 
     function NavigateNewPage(dir: string) {
         window.open(dir,"_blank", "noreferrer");
@@ -133,6 +144,17 @@ const ProjectIconpendiumPage = (prop: any) => {
                     </div>
                     
                     <div style={{marginTop:"2em"}} />
+
+                    <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
+                        
+                        {imageset.map((item) => (
+                                        <div className="col" key={"abilityDisplay"+item.ID}>
+                                            <GalleryArtDisplay data={item}/>
+                                            <br/>
+                                        </div>
+                                    ))}
+                        
+                    </div>
                 </div>
             </div>
         </div>

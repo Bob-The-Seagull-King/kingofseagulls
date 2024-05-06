@@ -5,7 +5,8 @@ enum ItemType {
     None = '',
     Ability = 'Ability',
     Addon = 'Addon',
-    GlossaryRule = 'Glossary'
+    GlossaryRule = 'Glossary',
+    Gallery = 'Gallery'
 }
 
 export {ItemType}
