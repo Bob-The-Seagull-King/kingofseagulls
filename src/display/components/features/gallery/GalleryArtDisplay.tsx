@@ -21,6 +21,7 @@ import TagDisplay from '../../subcomponents/TagDisplay'
 const GalleryArtDisplay = (props: any) => {
 
     const [show, setShow] = useState(false);
+    const [showsize, setSize] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -29,6 +30,16 @@ const GalleryArtDisplay = (props: any) => {
     const bannedAbilityTags = ["inflict", "type"]
 
     const image = imagesbypath[GalleryObject.path]
+    const desc = GalleryObject.description
+    const img = new (window as any).Image()
+    img.src = image;
+    img.onload = () => {
+        if (img.width > img.height) {
+            setSize(true);
+        } else {
+            setSize(false);
+        }
+    }
 
     function returnTags() {
         const displaytags = sortTagsForDisplay()
@@ -61,17 +72,20 @@ const GalleryArtDisplay = (props: any) => {
         return tagarray;
     }
 
+
     return (
         <>
             <div style={{display:"flex"}}>
-                
-                <div className="image-wrapper">
-                    <Image src={image} fluid onClick={() => handleShow()}/>
+                <div className="image-wrapper hovermouse" onClick={() => handleShow()}>
+                    <Image src={image} fluid />
                 </div>
             </div>
 
-            <Modal onEnterKeyDown={() => handleClose()} show={show}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleClose} keyboard={true}  centered>
+            <Modal onEnterKeyDown={() => handleClose()} show={show} size={showsize? "lg" : undefined} contentClassName="filterboxStructure" dialogClassName="" onHide={handleClose} keyboard={true}  centered>
                 <Modal.Body >
+                    <Image src={image} fluid />
+                    {returnTags()}
+                    <p dangerouslySetInnerHTML={{__html: desc}}></p>
                 </Modal.Body>
             </Modal>
         </>
