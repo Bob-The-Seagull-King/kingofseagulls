@@ -75,15 +75,14 @@ const GalleryArtDisplay = (props: any) => {
 
     return (
         <>
-            <div style={{display:"flex"}}>
-                <div className="image-wrapper hovermouse" onClick={() => handleShow()}>
-                    <Image src={image} fluid />
+                <div className={(showsize? "image-wrapperwide" : "image-wrapper") + " hovermouse"} onClick={() => handleShow()}>
+                    <Image src={image} />
                 </div>
-            </div>
 
             <Modal onEnterKeyDown={() => handleClose()} show={show} size={showsize? "lg" : undefined} contentClassName="filterboxStructure" dialogClassName="" onHide={handleClose} keyboard={true}  centered>
                 <Modal.Body >
                     <Image src={image} fluid />
+                    <br/>
                     {returnTags()}
                     <p dangerouslySetInnerHTML={{__html: desc}}></p>
                 </Modal.Body>
