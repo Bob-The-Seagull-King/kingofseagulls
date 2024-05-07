@@ -4,6 +4,7 @@ import abilitiesdata from '../data/player/abilities.json'
 import addonsdata from '../data/player/addons.json'
 import glossarydata from '../data/general/glossary.json'
 import artdata from '../data/art/art.json'
+import iconpendiumdata from '../data/art/iconpendium.json'
 // -----------------------------------------------------
 
 /**
@@ -72,6 +73,9 @@ class DataResponder {
             }
             case "art": {
                 return artdata.concat(data)
+            }
+            case "iconpendium": {
+                return iconpendiumdata.concat(data)
             }
             default: {
                 return data

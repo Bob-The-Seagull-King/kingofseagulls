@@ -10,7 +10,7 @@ const ProjectIconpendiumPage = (prop: any) => {
 
     const gallery: ViewArtGalleryCollections = new ViewArtGalleryCollections();
     
-    gallery.UpdateSearchParams({searchtype: "file", searchparam: {type: "art"}});
+    gallery.UpdateSearchParams({searchtype: "file", searchparam: {type: "iconpendium"}});
     gallery.RunSearch();
 
     const imageset = gallery.AbilitiesList;
@@ -145,7 +145,7 @@ const ProjectIconpendiumPage = (prop: any) => {
                     
                     <div style={{marginTop:"2em"}} />
 
-                    <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
+                    <div className="row row-cols-lg-3 row-cols-md-3 row-cols-sx-2 row-cols-xs-2 row-cols-2">
                         
                         {imageset.map((item) => (
                                         <div className="col" key={"abilityDisplay"+item.ID}>
